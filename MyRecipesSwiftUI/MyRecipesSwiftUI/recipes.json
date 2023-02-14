@@ -1,0 +1,26 @@
+{
+    "title": "My recipes sample data",
+    "recipes": [
+        {
+            "id": "1",
+            "title": "Stuffed Peppers",
+            "imageID": "ri1",
+            "favorite": false,
+            "text": "Directions\nStep 1\nPreheat oven to 350°. In a small saucepan over medium heat, add beans and 1 cup of water. Bring to a simmer and let simmer until beans are warmed through, about 10 minutes. Smash with a wooden spoon until most of the beans are smashed with some whole remaining. Add more water as needed to help create a smoother consistency.\nStep 2\nMeanwhile, place tostadas on a large baking sheet and sprinkle cheese evenly over each. Bake until cheese is melty, about 5 minutes.\nStep 3\nEnd"
+        },
+        {
+            "id": "2",
+            "title": "Black Bean Tostadas",
+            "imageID": "ri2",
+            "favorite": false,
+            "text": "Directions\nStep 1\nPat chicken dry with paper towels, then season all over with salt and pepper. In a small bowl, combine cumin, oregano, garlic powder, and cayenne. Rub mixture into chicken.\nStep 2\nIn a large skillet over medium-high heat, heat oil. Add chicken and cook until golden, 5 minutes per side. Remove skillet and reserve on a plate.\nStep 3\nTo same skillet over medium heat, add onion and pepper. Cook until soft, 5 minutes. Add garlic and cook until fragrant, 1 minute more, then stir in tomato paste.\nStep 4\nAdd rice and cook until well coated and toasted, 3 minutes. Pour in chicken broth and diced tomatoes, and bay leaf, stirring up any bits from bottom of pan. Bring to a boil, then add chicken back to skillet. Reduce heat and let simmer, covered, until chicken is cooked through and rice is tender, 30 minutes. Stir occasionally to make sure rice is not sticking to bottom of pan. Add more water or broth as necessary.\nStep 5\nRemove bay leaf and serve with cilantro.\nStep 4\nAdd rice and cook until well coated and toasted, 3 minutes. Pour in chicken broth and diced tomatoes, and bay leaf, stirring up any bits from bottom of pan. Bring to a boil, then add chicken back to skillet. Reduce heat and let simmer, covered, until chicken is cooked through and rice is tender, 30 minutes. Stir occasionally to make sure rice is not sticking to bottom of pan. Add more water or broth as necessary.\nStep 5\nEnd"
+        },
+        {
+            "id": "3",
+            "title": "Arroz Con Pollo",
+            "imageID": "ri3",
+            "favorite": false,
+            "text": "Directions\nStep 1\nPreheat oven to 400°. In a small saucepan, prepare rice according to package instructions. In a large skillet over medium heat, heat oil. Cook onion until soft, about 5 minutes. Stir in tomato paste and garlic and cook until fragrant, about 1 minute more. Add ground beef and cook, breaking up meat with a wooden spoon, until no longer pink, 6 minutes. Drain fat.\nEnd"
+        }
+    ]
+}
