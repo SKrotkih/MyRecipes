@@ -15,13 +15,19 @@ class RecipeItemView: UIView {
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
     @IBOutlet weak var descriptionLabelHeight: NSLayoutConstraint!
     
-    func configure(with cell: UITableViewCell, model: ReceipeData?) {
+    func configure(with cell: UITableViewCell, model: ReceipeData?, width: CGFloat) {
         func textHeight(of text: String?, width: CGFloat, font: UIFont) -> CGFloat {
             if let text {
                 return text.heightWithConstrainedWidth(width: width, font: font)
             } else {
                 return 0.0
             }
+        }
+        func imageHeight(of image: UIImage?, width: CGFloat) -> CGFloat {
+            guard let image else { return 0.0 }
+            let size = image.size
+            let k = width / size.width
+            return size.height * k
         }
         guard let model else { return }
         
@@ -30,13 +36,13 @@ class RecipeItemView: UIView {
         descriptionLabel.text = model.description
 
         var height: CGFloat = 0.0
-        let h1 = textHeight(of: model.title, width: 300.0, font: titleLabel.font)
+        let h1 = textHeight(of: model.title, width: width, font: titleLabel.font)
         titleLabelHeight.constant = h1
         height += h1; height += 5.0
-        let h2 = 200.0
+        let h2 = imageHeight(of: model.image, width: width)
         imageViewHeight.constant = h2
         height += h2; height += 5.0
-        let h3 = textHeight(of: model.description, width: 300.0, font: descriptionLabel.font)
+        let h3 = textHeight(of: model.description, width: width, font: descriptionLabel.font)
         descriptionLabelHeight.constant = h3
         height += h3; height += 5.0
         

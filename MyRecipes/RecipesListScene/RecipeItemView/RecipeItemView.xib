@@ -17,12 +17,12 @@
             <rect key="frame" x="0.0" y="0.0" width="405" height="244"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzc-R6-n7z">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzc-R6-n7z">
                     <rect key="frame" x="5" y="5" width="395" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="u4Q-F2-iDO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -43,10 +43,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgb-rZ-YUS">
-                    <rect key="frame" x="15" y="230" width="390" height="1"/>
+                    <rect key="frame" x="0.0" y="230" width="405" height="2"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="C8z-IF-DnU"/>
+                        <constraint firstAttribute="height" constant="2" id="C8z-IF-DnU"/>
                     </constraints>
                 </view>
             </subviews>
@@ -63,7 +63,7 @@
                 <constraint firstAttribute="trailing" secondItem="zgb-rZ-YUS" secondAttribute="trailing" id="q4M-Kc-foR"/>
                 <constraint firstItem="rzc-R6-n7z" firstAttribute="leading" secondItem="vc9-mD-FNe" secondAttribute="leading" constant="5" id="sgh-VI-L5T"/>
                 <constraint firstItem="xuz-cv-tTf" firstAttribute="leading" secondItem="BcI-Qg-kfR" secondAttribute="leading" constant="5" id="uxZ-q3-u9L"/>
-                <constraint firstItem="zgb-rZ-YUS" firstAttribute="leading" secondItem="vc9-mD-FNe" secondAttribute="leading" constant="15" id="vSN-L7-JmO"/>
+                <constraint firstItem="zgb-rZ-YUS" firstAttribute="leading" secondItem="vc9-mD-FNe" secondAttribute="leading" id="vSN-L7-JmO"/>
                 <constraint firstItem="rzc-R6-n7z" firstAttribute="top" secondItem="vc9-mD-FNe" secondAttribute="top" constant="5" id="waV-h5-JMZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

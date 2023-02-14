@@ -10,7 +10,7 @@ import Combine
 class RecipesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var itemView: RecipeItemView!
-    private var viewModel = RecipeViewModel()
+    private var viewModel: RecipesListDataSource = RecipesFakeData()
     private var disposableBag = Set<AnyCancellable>()
    
     override func viewDidLoad() {
@@ -47,7 +47,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         Bundle.main.loadNibNamed("RecipeItemView", owner: self, options: nil)
         cell.addSubview(itemView!)
-        itemView!.configure(with: cell, model: viewModel[indexPath.row])
+        itemView!.configure(with: cell, model: viewModel[indexPath.row], width: tableView.frame.width)
         return cell
     }
     
