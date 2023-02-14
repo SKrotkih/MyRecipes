@@ -75,7 +75,7 @@
                 <outlet property="titleLabel" destination="rzc-R6-n7z" id="Dog-3F-O1r"/>
                 <outlet property="titleLabelHeight" destination="u4Q-F2-iDO" id="hMl-Qf-BI7"/>
             </connections>
-            <point key="canvasLocation" x="145.80152671755724" y="-189.43661971830986"/>
+            <point key="canvasLocation" x="-13" y="-1496"/>
         </view>
     </objects>
 </document>
