@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3177A690299BB02700D96BCF /* RicipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3177A68F299BB02700D96BCF /* RicipeViewModel.swift */; };
 		31ADC7B5299A324C0015BF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADC7B4299A324C0015BF52 /* AppDelegate.swift */; };
 		31ADC7B7299A324C0015BF52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADC7B6299A324C0015BF52 /* SceneDelegate.swift */; };
 		31ADC7B9299A324C0015BF52 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADC7B8299A324C0015BF52 /* RecipesViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3177A68F299BB02700D96BCF /* RicipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RicipeViewModel.swift; sourceTree = "<group>"; };
 		31ADC7B1299A324C0015BF52 /* MyRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ADC7B4299A324C0015BF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31ADC7B6299A324C0015BF52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3177A68E299BAFEE00D96BCF /* RecipeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3177A68F299BB02700D96BCF /* RicipeViewModel.swift */,
+			);
+			path = RecipeViewModel;
+			sourceTree = "<group>";
+		};
 		3192865C299B562700EFD8D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 			children = (
 				31ADC7B8299A324C0015BF52 /* RecipesViewController.swift */,
 				31ADC7D0299A585D0015BF52 /* RecipeItemView */,
+				3177A68E299BAFEE00D96BCF /* RecipeViewModel */,
 			);
 			path = RecipesListScene;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31ADC7CF299A580A0015BF52 /* RecipeItemView.swift in Sources */,
+				3177A690299BB02700D96BCF /* RicipeViewModel.swift in Sources */,
 				31ADC7B9299A324C0015BF52 /* RecipesViewController.swift in Sources */,
 				31ADC7B5299A324C0015BF52 /* AppDelegate.swift in Sources */,
 				31ADC7B7299A324C0015BF52 /* SceneDelegate.swift in Sources */,

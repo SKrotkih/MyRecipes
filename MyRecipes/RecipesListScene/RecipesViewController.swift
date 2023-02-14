@@ -2,64 +2,52 @@
 //  RecipesViewController.swift
 //  MyRecipes
 //
-//  Created by Sergey Krotkih on 13.02.2023.
+//  Created by Serhii Krotkykh on 13.02.2023.
 //
 import UIKit
+import Combine
 
 class RecipesViewController: UIViewController {
-    @IBOutlet var RecipeItemView: RecipeItemView!
-    
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet var itemView: RecipeItemView!
+    private var viewModel = RecipeViewModel()
+    private var disposableBag = Set<AnyCancellable>()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
+        subscribeOnInputData()
+    }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        viewModel.add()
+    }
+    
+    private func subscribeOnInputData() {
+        viewModel.isDataUpdated
+            .sink { [weak self] _ in
+                self?.tableView.reloadData()
+            }.store(in: &disposableBag)
+    }
+    
+    private func configureView() {
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.reloadData()
     }
 }
 
+// MARK: - TableView delegate and data source protocols
 extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        let row = indexPath.row
-        
         Bundle.main.loadNibNamed("RecipeItemView", owner: self, options: nil)
-        let cellView = self.RecipeItemView!
-
-        cellView.titleLabel.text = "\(row + 1)\nIn this Blog I shall be talking about adding Dynamically resizing UITableViewCells. There are a bunch of articles and videos on the internet but almost all of them revolve around the implementation using storyboards."
-
-        cellView.descriptionLabel.text = "\(row + 1)\nIn this Blog I shall be talking about adding Dynamically resizing UITableViewCells. There are a bunch of articles and videos on the internet but almost all of them revolve around the implementation using storyboards."
-
-        cellView.imageView.image = UIImage(named: "food")
-        
-        cell.addSubview(cellView)
-
-        var height: CGFloat = 0.0
-        cellView.titleLabelHeight.constant = 100.0
-        height += 100.0
-        height += 5.0
-        cellView.imageViewHeight.constant = 200.0
-        height += 200.0
-        height += 5.0
-        cellView.descriptionLabelHeight.constant = 100.0
-        height += 100.0
-        height += 5.0
-        
-        cellView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            cellView.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
-            cellView.trailingAnchor.constraint(equalTo: cell.trailingAnchor),
-            cellView.topAnchor.constraint(equalTo: cell.topAnchor),
-            cellView.bottomAnchor.constraint(equalTo: cell.bottomAnchor),
-            cellView.heightAnchor.constraint(equalToConstant: height)
-        ])
+        cell.addSubview(itemView!)
+        itemView!.configure(with: cell, model: viewModel[indexPath.row])
         return cell
     }
     

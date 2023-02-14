@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MyRecipes
 //
-//  Created by Sergey Krotkih on 13.02.2023.
+//  Created by Serhii Krotkykh on 13.02.2023.
 //
 
 import UIKit
