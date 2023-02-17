@@ -1,17 +1,17 @@
 
 # Some iOS Cocoa Layout Job interview Questions in practice
 
-The some job interview questions will be explained on very simple application 
-called MyRecipes where you can manage your favorite recipes.
+The some job interview questions will be explained with a very easy example called MyRecipes where you can manage your favorite recipes.
 
-## What is the difference between Xib and Nib files?
+The letter was published [here](https://medium.com/@sergeykrotkih/some-ios-cocoa-layout-job-interview-questions-in-practice-d371c70cbbb5)
 
-  Let’s create a new Xcode project. Call it MyRecipes. 
+## What is difference between Xib and Nib files?
+
+Let’s create a new Xcode project called MyRecipes: 
 
 <img alt="picture 1" align="center" src="/Resources/picture 1.png">
 
-Rename ViewController to RecipesViewController. Open main.storyboard
-Select ViewController. Select RecipesViewController on the Identity Inspector. Add UITableView to the view controller. Make shure the table view has just one Prototype Cell. Let's call it 'cell'. 
+Enter into the new project. Rename ViewController to RecipesViewController. Open main.storyboard. Select ViewController. Choice RecipesViewController on the Identity Inspector. Add UITableView to the view controller. Make shure the table view has just one Prototype Cell. Let’s call it ‘cell’: 
 
 <img alt="picture 1" align="center" src="/Resources/picture 2.png">
 
@@ -28,15 +28,14 @@ Open the Xib file and update it according the picture:
 <img alt="picture 1" align="center" src="/Resources/picture 5.png">  
 
 There are two files with same name with Swift and Xib (selected on the picture) extencions.
-But where is the Nib file? Nib file is a file wich Xcode creates while Xib file compilation.
-Nib file has some common format and using for restoring view on run time. 
-<img alt="picture 1" align="right" src="/Resources/picture 6.png">   
+But where is the Nib file?
+Nib file is a file which Xcode creates while Xib file compilation.
+Nib file has some common format and using for restoring view on run time.
 Xcode saves it in the built app folder. Open a folder with path like this:
+###˜/Library/Developer/Xcode/DerivedData/MyRecipes-…./Build/Products/Debug-iphonesimulator/MyRecipes
+Then open context menu (by right mouse button) and select “Show Package Contents”:
 
-###˜/Library/Developer/Xcode/DerivedData/MyRecipes-..../Build/Products/Debug-iphonesimulator/MyRecipes
-
-Then open context menu (by right mouse button) and select "Show Package Contents":
-On the picture you can see the Nib file.
+<img alt="picture 1" align="center" src="/Resources/picture 6.png">
 
 ## How to use Xib file?
 
@@ -72,7 +71,7 @@ Open RecipesViewController.swift. Add following line:
 Return to the Xib edit screen. Select File's Owner. Press on the mouse right button. Drag to the RecipesItemView.
 Select itemView. So we bound File owner and element of the xib.
 
-<img alt="picture 1" align="center" src="/Resources/picture 8.png">
+<img alt="picture 1" align="center" src="/Resources/movie1.gif">
 
 Let's return to the previous line:
 ```swift
@@ -160,7 +159,14 @@ The next step is to prepare UITableViewCell. Override two method of the UITableV
         return cell
     }
 ``` 
+
 ## Conclusion
-    MyRecipes app developed with using MVVM pattern. ViewModel published data with Combine PassthroughSubject and View subscribes on it. View send message to the ViewModel about produce new recipe data, then gets data and updates table view. More details you can see in source code.
+
+MyRecipes app developed with using MVVM pattern. ViewModel published data with Combine PassthroughSubject and the View subscribes on it. View send message to the ViewModel about produce a new recipe data, then gets data and updates the tableView. As a result you should see something like this:
    
 <img alt="picture 1" align="center" src="/Resources/myrecipes.gif">
+
+## History
+
+- 17th February 2023: Initial version
+- Published on the [Media](https://medium.com/@sergeykrotkih/some-ios-cocoa-layout-job-interview-questions-in-practice-d371c70cbbb5) 
