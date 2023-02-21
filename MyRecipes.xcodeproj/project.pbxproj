@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31239C4929A50AC400416A7E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31239C4829A50AC400416A7E /* Extensions.swift */; };
 		3177A690299BB02700D96BCF /* RecipesFakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3177A68F299BB02700D96BCF /* RecipesFakeData.swift */; };
 		31ADC7B5299A324C0015BF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADC7B4299A324C0015BF52 /* AppDelegate.swift */; };
 		31ADC7B7299A324C0015BF52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADC7B6299A324C0015BF52 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31239C4829A50AC400416A7E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3177A68F299BB02700D96BCF /* RecipesFakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesFakeData.swift; sourceTree = "<group>"; };
 		3177A691299BD63B00D96BCF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		31ADC7B1299A324C0015BF52 /* MyRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 			children = (
 				31ADC7B4299A324C0015BF52 /* AppDelegate.swift */,
 				31ADC7B6299A324C0015BF52 /* SceneDelegate.swift */,
+				31239C4829A50AC400416A7E /* Extensions.swift */,
 				31ADC7D7299A615C0015BF52 /* RecipesListScene */,
 				3192865C299B562700EFD8D6 /* Resources */,
 				31ADC7C2299A324F0015BF52 /* Info.plist */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31ADC7CF299A580A0015BF52 /* RecipeItemView.swift in Sources */,
+				31239C4929A50AC400416A7E /* Extensions.swift in Sources */,
 				3177A690299BB02700D96BCF /* RecipesFakeData.swift in Sources */,
 				31ADC7B9299A324C0015BF52 /* RecipesViewController.swift in Sources */,
 				31ADC7B5299A324C0015BF52 /* AppDelegate.swift in Sources */,

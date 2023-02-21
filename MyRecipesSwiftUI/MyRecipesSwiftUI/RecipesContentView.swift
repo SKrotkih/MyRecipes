@@ -8,7 +8,6 @@ import SwiftUI
 
 struct RecipesContentView: View {
     @EnvironmentObject var viewModel: RecipesFakeData   // protocol must be
-    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -28,13 +27,12 @@ struct RecipesContentView: View {
     }
     
     private func rowHeight(index: Int, width: CGFloat) -> CGFloat {
-        if (0...viewModel.count - 1).contains(index),
+        if let model = viewModel[index],
            let view = Bundle.main.loadNibNamed("RecipeItemView", owner: nil, options: nil)?.first as? RecipeItemView {
-            let model = viewModel[index]!
             var height = model.title?.height(for: width, font: view.titleLabel.font) ?? 0
             height += model.image?.height(for: width) ?? 0
             height += model.description?.height(for: width, font: view.descriptionLabel.font) ?? 0
-            return height + 5.0 * 3
+            return height + 5.0 * 3  // see RecipeItemView.xib layout
         }
         return 0.0
     }
@@ -71,9 +69,8 @@ struct RecipeRow: UIViewRepresentable {
     }
 
     func makeUIView(context: Context) -> RecipeItemView {
-        if (0...viewModel.count - 1).contains(index),
+        if let model = viewModel[index],
            let view = Bundle.main.loadNibNamed("RecipeItemView", owner: nil, options: nil)?.first as? RecipeItemView {
-            let model = viewModel[index]!
             view.titleLabel.text = model.title ?? ""
             view.imageView.image = model.image
             view.descriptionLabel.text = model.description ?? ""

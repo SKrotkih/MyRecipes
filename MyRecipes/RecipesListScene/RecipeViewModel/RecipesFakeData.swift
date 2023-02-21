@@ -32,6 +32,7 @@ Step 2
 Meanwhile, place tostadas on a large baking sheet and sprinkle cheese evenly over each. Bake until cheese is melty, about 5 minutes.
 Step 3
 Top tostadas with beans, avocado slices, and hot sauce.
+End
 """
     
     let r2 = """
@@ -50,12 +51,14 @@ Step 4
 Add rice and cook until well coated and toasted, 3 minutes. Pour in chicken broth and diced tomatoes, and bay leaf, stirring up any bits from bottom of pan. Bring to a boil, then add chicken back to skillet. Reduce heat and let simmer, covered, until chicken is cooked through and rice is tender, 30 minutes. Stir occasionally to make sure rice is not sticking to bottom of pan. Add more water or broth as necessary.
 Step 5
 Remove bay leaf and serve with cilantro.
+End
 """
     
     let r3 = """
 Directions
 Step 1
 Preheat oven to 400°. In a small saucepan, prepare rice according to package instructions. In a large skillet over medium heat, heat oil. Cook onion until soft, about 5 minutes. Stir in tomato paste and garlic and cook until fragrant, about 1 minute more. Add ground beef and cook, breaking up meat with a wooden spoon, until no longer pink, 6 minutes. Drain fat.
+End
 """
     
     let tr1 = "Stuffed Peppers"
