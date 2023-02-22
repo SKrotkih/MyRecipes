@@ -210,6 +210,11 @@ MyRecipes app developed with using MVVM pattern. ViewModel published data with C
    
 <img alt="picture 1" align="center" src="/Resources/myrecipes.gif">
 
+## Requirements
+
+- Xcode 14+
+- Swift 5.7
+
 ## History
 
 - 17th February 2023: Initial version
