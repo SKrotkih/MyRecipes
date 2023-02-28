@@ -14,8 +14,9 @@ struct RecipesContentView: View {
                 NavigationBar()
                 List {
                     ForEach(0..<viewModel.count, id: \.self) { index in
-                        RecipeRow(index: index, width: geometry.size.width - 30.0)
-                            .frame(width: geometry.size.width - 30.0, height: rowHeight(index: index, width: geometry.size.width - 30.0))
+                        let width = geometry.size.width - 30.0
+                        RecipeRow(index: index, width: width)
+                            .frame(width: width, height: rowHeight(index: index, width: width))
                             .background(.black)
                     }
                  }
